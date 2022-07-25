@@ -1,5 +1,5 @@
 import * as model from './model.js';
-import icons from '../img/icons.svg'; //parcel 2
+import icons from 'url:../img/icons.svg'; //parcel 2
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
@@ -43,7 +43,7 @@ const showRecipe = async function () {
     // 2.rendering recipe
     const markup = `
     <figure class="recipe__fig">
-          <img src="${recipe.image}" alt="${
+          <img crossorigin="anonymous" src="${recipe.image}" alt="${
       recipe.title
     }" class="recipe__img" />
           <h1 class="recipe__title">
@@ -54,7 +54,7 @@ const showRecipe = async function () {
         <div class="recipe__details">
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="${icons}#icon-clock"></use>
+              <use crossorigin="anonymous" href="${icons}#icon-clock"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${
               recipe.cookingTime
@@ -63,7 +63,7 @@ const showRecipe = async function () {
           </div>
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="${icons}#icon-users"></use>
+              <use crossorigin="anonymous" href="${icons}#icon-users"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--people">4</span>
             <span class="recipe__info-text">${recipe.servings}</span>
@@ -71,7 +71,7 @@ const showRecipe = async function () {
             <div class="recipe__info-buttons">
               <button class="btn--tiny btn--increase-servings">
                 <svg>
-                  <use href="${icons}#icon-minus-circle"></use>
+                  <use crossorigin="anonymous" href="${icons}#icon-minus-circle"></use>
                 </svg>
               </button>
               <button class="btn--tiny btn--increase-servings">
@@ -84,7 +84,7 @@ const showRecipe = async function () {
 
           <div class="recipe__user-generated">
             <svg>
-              <use href="${icons}#icon-user"></use>
+              <use crossorigin="anonymous" href="${icons}#icon-user"></use>
             </svg>
           </div>
           <button class="btn--round">
@@ -101,7 +101,7 @@ const showRecipe = async function () {
              .map(ing => {
                return `<li class="recipe__ingredient">
               <svg class="recipe__icon">
-                <use href="${icons}#icon-check"></use>
+                <use crossorigin="anonymous" href="${icons}#icon-check"></use>
               </svg>
               <div class="recipe__quantity">${ing.quantity}</div>
               <div class="recipe__description">
